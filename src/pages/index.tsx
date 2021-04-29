@@ -1,6 +1,7 @@
 import { GetStaticProps } from 'next';
 import { CardHouse } from '../components/cardHouse'
 import { api } from '../services/axiosbackend';
+import styles from '../styles/index.module.scss'
 
 interface propertyInfo{
   id:string,
@@ -20,13 +21,16 @@ export default function Home({properties}:CardInfo) {
 <>
 
     <h1>aaaaaa</h1>
-    {
-      properties.map(house=>{
-        return(
-          <CardHouse id={house.id} state={house.state} city={house.city} amountValue={house.amountValue} imageLink={house.imageLink} key={house.id}/>
-        )
-      })
-    }
+    <div className={styles.table}>
+      {
+        properties.map(house=>{
+          return(
+            <CardHouse id={house.id} state={house.state} city={house.city} amountValue={house.amountValue} imageLink={house.imageLink} key={house.id}/>
+          )
+        })
+      }
+    </div>
+    
  </>     
   )
 }

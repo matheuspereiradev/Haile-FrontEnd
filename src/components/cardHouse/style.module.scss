@@ -1,9 +1,10 @@
 .cardContainer {
-    
+    position: relative;
     width: 200px;
     min-height: 230px;
-    background-color: #f0cbf0;
+    background-color: var(--light-gray);
     border-radius: 8px;
+    float: left;
      
     img{
         width: 100%;
@@ -12,32 +13,34 @@
         border-top-right-radius: 8px;
     }
     
-    .card-body{
+    .cardBody{
         padding: 3px;
+        text-align: center;
+        color: var(--gray-800);
 
-        .card-title{
+        .cardTitle{
             text-align: center;
             font-size: 15px;
             line-height: 12px;
             font-weight: 600;
         }
 
-        .card-value{
+        .cardValue{
             margin-top: 5px;
             padding: 2px;
             font-size: 18px;
-            font-weight: 700;
+            font-weight: 400;
 
             small{
                 padding: 2px;
-                font-size: 11px;
+                font-size: 10px;
                 vertical-align: top;
             
             }
 
         }
 
-        .btn-buy{
+        .btnBuy{
             height: 30px;
             width:100%;
             border-radius: 4px;
@@ -50,11 +53,11 @@
             transition: background-color 0.2s;
         }
         
-        .btn-buy:hover{
+        .btnBuy:hover{
             background: #1B6E42;
         }
         
-        .btn-favorite{
+        .btnFavorite{
             height: 30px;
             width:30px;
             border-radius: 100%;
@@ -66,7 +69,7 @@
             padding:-4px;
         }
         
-        .btn-favorite:hover{
+        .btnFavorite:hover{
             color: #AB2800;
             background-color: #ffeded;
         }
