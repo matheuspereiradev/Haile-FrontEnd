@@ -1,0 +1,43 @@
+.bannerContainer {
+    background: var(--blue);  
+    min-height: 8rem;
+    padding: 1rem ;
+    font-size: 2rem;
+    
+    .content{
+        text-align: center;
+        vertical-align:middle;
+        display:table-cell;
+
+        p {
+            margin-left:2rem;
+            padding: 0.25rem 0 0.25rem 2rem;
+            color: var(--white);
+        }
+    
+        span {
+            margin-left:auto;
+            text-transform: capitalize;
+        }
+    
+        button{
+            
+            height: 3.5rem;
+            width: 9rem;
+            border-radius: 0.3rem;
+            border: 0;
+            cursor: pointer;
+            color: #fff;
+            background-color: #DE163F;
+            transition: background-color 0.2s;
+            padding:-4px;
+        }
+        
+        button:hover{
+            color: #AB2800;
+            background-color: #ffeded;
+        }
+    }
+
+    
+}

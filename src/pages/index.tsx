@@ -1,4 +1,5 @@
 import { GetStaticProps } from 'next';
+import { Banner } from '../components/banner';
 import { CardHouse } from '../components/cardHouse'
 import { api } from '../services/axiosbackend';
 import styles from '../styles/index.module.scss'
@@ -19,8 +20,7 @@ interface CardInfo {
 export default function Home({properties}:CardInfo) {
   return (
 <>
-
-    <h1>Bem vindo ao Haile</h1>
+    <Banner/>
     <div className={styles.table}>
       {
         properties.map(house=>{
