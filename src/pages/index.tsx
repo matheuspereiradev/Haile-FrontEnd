@@ -1,6 +1,7 @@
 import { GetStaticProps } from 'next';
 import { Banner } from '../components/banner';
 import { CardHouse } from '../components/cardHouse'
+import { RectangleCard } from '../components/rectangleCard';
 import { api } from '../services/axiosbackend';
 import styles from '../styles/index.module.scss'
 
@@ -21,6 +22,7 @@ export default function Home({properties}:CardInfo) {
   return (
 <>
     <Banner/>
+    <RectangleCard/>
     <div className={styles.table}>
       {
         properties.map(house=>{
