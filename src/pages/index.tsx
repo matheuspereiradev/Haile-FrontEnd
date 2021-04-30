@@ -20,7 +20,7 @@ export default function Home({properties}:CardInfo) {
   return (
 <>
 
-    <h1>aaaaaa</h1>
+    <h1>Bem vindo ao Haile</h1>
     <div className={styles.table}>
       {
         properties.map(house=>{
