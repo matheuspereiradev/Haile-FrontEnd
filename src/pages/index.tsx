@@ -7,10 +7,16 @@ import styles from '../styles/index.module.scss'
 
 interface propertyInfo{
   id:string,
-  city:string,
-  state:string,
-  imageLink:string,
-  amountValue:number,
+    city:string,
+    state:string,
+    imageLink:string,
+    amountValue:number,
+    contractType:string,
+    adviser:string,
+    street:string,
+    district:string,
+    number:string,
+    details:string
 }
 
 interface CardInfo {
@@ -22,13 +28,25 @@ export default function Home({properties}:CardInfo) {
   return (
 <>
     <Banner/>
-    <RectangleCard/>
     <div className={styles.table}>
       {
         properties.map(house=>{
           return(
-            <CardHouse id={house.id} state={house.state} city={house.city} amountValue={house.amountValue} imageLink={house.imageLink} key={house.id}/>
-          )
+              <RectangleCard 
+                id={house.id} 
+                state={house.state} 
+                city={house.city} 
+                amountValue={house.amountValue} 
+                imageLink={house.imageLink} 
+                key={house.id} 
+                street={house.street} 
+                number={house.number}
+                district={house.district}
+                details={house.details}
+                adviser={house.adviser}
+                contractType={house.contractType}
+              />
+            )
         })
       }
     </div>
@@ -41,18 +59,23 @@ export const getStaticProps:GetStaticProps = async ()=>{
   
   const {data} = await api.get('property');
 
-  const properties = data.map(property=>{
+  const properties:propertyInfo = data.map(property=>{
     return{
         id:property.id,
         city:property.city.name,
         state:property.city.uf,
-        amountValue:Number(property.amountValue),
+        amountValue:Number(property.amountValue).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }),
         imageLink:"https://cdn.pixabay.com/photo/2016/06/24/10/47/house-1477041_1280.jpg",
-        
+        street: property.street,
+        number:property.houseNumber,
+        district:property.district,
+        details:property.note,
+        adviser:property.advertiser.name,
+        contractType:property.contractType.name
     }
     
   })
-
+  console.log(properties)
   return{
     props:{
       properties
