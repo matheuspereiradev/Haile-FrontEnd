@@ -4,9 +4,15 @@ export function Header(){
 
     return (
         <header className={styles.headerContainer}>
-          <img src="/logo.svg" alt="Haile logo"></img>  
-          <p>O lugar certo para encontrar seu novo lar!</p>
-          <span>Login</span>
+          <img src="/vercel.svg" alt="Haile logo"></img>  
+          <ul className={styles.navLinks}>
+            <li className={styles.onlyText}>
+              Entrar
+            </li>
+            <li className={styles.withBorder}>
+              Cadastre-se
+            </li>
+          </ul> 
         </header>
     );
 
