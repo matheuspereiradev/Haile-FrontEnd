@@ -1,43 +1,63 @@
 .bannerContainer {
-    background: var(--blue);  
-    min-height: 8rem;
+    background: #232931;  
+    min-height: 20rem;
     padding: 1rem ;
-    font-size: 2rem;
     
-    .content{
-        text-align: center;
-        vertical-align:middle;
-        display:table-cell;
-
-        p {
+    
+    .text{
+        float: left;
+        
+        h3 {
+            width: 30rem;
+            font-size: 2rem;
             margin-left:2rem;
+            margin-top: 4rem;
             padding: 0.25rem 0 0.25rem 2rem;
             color: var(--white);
+            font-weight: 600;
         }
     
-        span {
-            margin-left:auto;
-            text-transform: capitalize;
+        p {
+            width: 30rem;
+            margin-left:2rem;
+            text-align: justify;
+            text-justify: inter-word;
+            font-size: 1.5rem;
+            margin-top: 1rem;
+            padding: 0.25rem 0 0.25rem 2rem;
+            color: var(--white);
+            font-weight: 400;
         }
-    
+        
         button{
             
-            height: 3.5rem;
+            height: 3rem;
             width: 9rem;
-            border-radius: 0.3rem;
+            border-radius: 3rem;
             border: 0;
+            margin-left:5rem;
+            margin-top: 0.6rem;
             cursor: pointer;
             color: #fff;
-            background-color: #DE163F;
+            background-color: #f04646;
             transition: background-color 0.2s;
             padding:-4px;
         }
         
         button:hover{
-            color: #AB2800;
-            background-color: #ffeded;
+            color: #ffeded;
+            background-color: #DE163F;
         }
+        
     }
+
+    .column{
+        margin-top: 2.5rem;
+        float: left;
+        padding-left: 10rem;
+    }
+
+    
 
     
 }

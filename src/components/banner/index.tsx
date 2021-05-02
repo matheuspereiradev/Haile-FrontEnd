@@ -5,9 +5,13 @@ export function Banner() {
 
   return (
     <div className={styles.bannerContainer}>
-      <div className={styles.content}>
-        <p>Anuncie ou procure imóveis com a Haile é simples e rápido! aqui vamos facilitar sua busca</p>
+      <div className={styles.text}>
+        <h3>Anuncie ou procure imóveis</h3>
+        <p>Com a Haile é simples e rápido fazer negócios imobiliarios</p>
         <button>ver planos</button>
+      </div> 
+      <div className={styles.column}>
+        <img src="casa.png" alt="desenho de imovel"/>
       </div> 
     </div>
   );

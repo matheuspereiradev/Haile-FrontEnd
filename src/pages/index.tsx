@@ -75,7 +75,7 @@ export const getStaticProps:GetStaticProps = async ()=>{
     }
     
   })
-  console.log(properties)
+  
   return{
     props:{
       properties
