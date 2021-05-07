@@ -6,7 +6,7 @@ export function Filters() {
     <div className={styles.filterContainer}>
         <div className={styles.cardBody}>
           <div className={styles.cardTitle}>
-              aaa
+              Filtros
           </div>
           <div className={styles.cardValue}>
               aaaa
