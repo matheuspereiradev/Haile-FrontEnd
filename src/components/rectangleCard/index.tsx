@@ -34,17 +34,17 @@ export function RectangleCard({id,city,state,amountValue,imageLink,contractType,
             <div className={styles.cardInfo}>
                 <ul>
                   <li>
-                    <span><GiTwoCoins size={18}/> {amountValue}</span>
+                    <p><GiTwoCoins size={18}/> {amountValue}</p>
                   </li>
                   <li>
-                    <span><FaMapMarkedAlt size={16}/> {`${street}, ${district}, Nº ${number}`}</span>
+                    <p><FaMapMarkedAlt size={16}/> {`${street}, ${district}, Nº ${number}`}</p>
                   </li>
 
                   <li>
-                    <span><FaRegHandshake size={16}/> {contractType}</span>
+                    <p><FaRegHandshake size={16}/> {contractType}</p>
                   </li>
                   <li>
-                    <span><FaUserTie size={16}/> {adviser}</span>
+                    <p><FaUserTie size={16}/> {adviser}</p>
                   </li>
                 </ul>
                 <hr/>

@@ -11,7 +11,7 @@ export function Banner() {
         <button>anunciar imóvel</button>
       </div> 
       <div className={styles.column}>
-        <img src="casa.png" alt="desenho de imovel"/>
+        
       </div> 
     </div>
   );

@@ -1,4 +1,5 @@
 import styles from "./style.module.scss";
+import {FaFilter} from "react-icons/fa"
 
 export function Filters() {
 
@@ -6,12 +7,11 @@ export function Filters() {
     <div className={styles.filterContainer}>
         <div className={styles.cardBody}>
           <div className={styles.cardTitle}>
-              Filtros
+            <span><FaFilter/> Filtros</span>
           </div>
           <div className={styles.cardValue}>
               aaaa
           </div>
-          <button className={styles.btnBuy}>Filtrar</button>
         </div>
     </div>
   );
