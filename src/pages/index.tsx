@@ -1,5 +1,6 @@
 import { GetStaticProps } from 'next';
 import { Banner } from '../components/banner';
+import { BannerHome } from '../components/bannerHome';
 import { CardHouse } from '../components/cardHouse'
 import { Filters } from '../components/filters';
 import { RectangleCard } from '../components/rectangleCard';
@@ -28,7 +29,7 @@ interface CardInfo {
 export default function Home({properties}:CardInfo) {
   return (
 <>
-    <Banner/>
+    <BannerHome/>
     <main className={styles.contentMain}>
       <div className={styles.leftArea}>
         <div className={styles.componentFilters}>

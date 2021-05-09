@@ -1,0 +1,52 @@
+.bannerContainer {
+
+    .pageHeading {
+        margin-top: 5rem;
+        padding: 10rem 0rem;
+        text-align: center;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url(http://localhost:3000/banner-home.jpg);
+        
+
+        .textContent {
+            h1 {
+                color: #f33f3f;
+                font-size: 3rem;
+                text-transform: uppercase;
+                font-weight: 700;
+                margin-bottom: 15px;
+                text-shadow: #1f1e1e 0 0 0.2em;
+            }
+            h2 {
+                color: #fff;
+                font-size: 2rem;
+                text-transform: uppercase;
+                text-shadow: #1f1e1e 0 0 0.2em;
+            }
+
+            button{
+                font-size: 1.4rem;
+                height: 4rem;
+                width: 15rem;
+                border-radius: 3rem;
+                border: 0;
+                margin-left:5rem;
+                margin-top: 0.6rem;
+                cursor: pointer;
+                color: #fff;
+                background-color: #f33f3f;
+                transition: background-color 0.2s;
+                padding:-4px;
+            }
+            
+            button:hover{
+                color: #ffeded;
+                background-color: #DE163F;
+            }
+        }
+
+    }
+
+}

@@ -11,7 +11,7 @@ export function Banner() {
         <button>anunciar imóvel</button>
       </div> 
       <div className={styles.column}>
-        
+        <img src="contorno-da-casa.svg" alt="house"/>
       </div> 
     </div>
   );
