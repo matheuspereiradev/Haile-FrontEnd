@@ -26,16 +26,18 @@
             line-height: 1.3rem;
             font-weight: 600;
             text-transform: uppercase;
+            
         }
 
-        .cardValue {
+        .cardContent {
             border: 1px solid #E5E5E5;
 
             .header {
                 margin: 0.5rem;
                 padding: 0.4px;
-                font-size: 1.2rem;
+                font-size: 1.1rem;
                 font-weight: 600;
+                cursor: pointer;
                 //background-color: var(--gray-200);
 
                 i {
@@ -49,7 +51,7 @@
                 margin: 0.5rem;
                 margin-left: 2rem;
                 padding: 0.4px;
-                font-size: 1rem;
+                font-size: 0.9rem;
                 font-weight: 500;
 
                 label {
