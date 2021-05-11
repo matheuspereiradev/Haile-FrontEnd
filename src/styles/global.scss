@@ -1,14 +1,16 @@
 :root {
     --white: #FFF;
   
-    --gray-50: #F7F8FA;
+    --gray-50: #edf4f2;
     --gray-100: #E6E8EB;
     --gray-200: #AFB2B1;
     --light-gray: #e6e4e4;
     --gray-500: #808080;
     --gray-800: #494D4B;
   
-    --green-500: #04D361;
+    --green-400: #04D361;
+    --green-500: #029946;
+    --green-600: #03803b;
     
     --purple-300: #9F75FF;
     --purple-400: #9164FA; 
@@ -16,9 +18,12 @@
     --purple-800: #6F48C9;
 
     --primary: #232931;
+    --primary-light: #313944;
 
     --blue:#0053C9;
     --black: #000000;
+
+    --red: #d32626;
 
     --media-desktop: "only screen and (max-width : 1024px)";
     --media-tablet: "only screen and (max-width : 768px)";

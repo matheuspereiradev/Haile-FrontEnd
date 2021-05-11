@@ -6,12 +6,12 @@ export function Header(){
         <header className={styles.headerContainer}>
           <img src="/vercel.svg" alt="Haile logo"></img>  
           <ul className={styles.navLinks}>
-            <li className={styles.onlyText}>
+            <button className={styles.onlyText}>
               Entrar
-            </li>
-            <li className={styles.withBorder}>
+            </button>
+            <button className={styles.withBorder}>
               Cadastre-se
-            </li>
+            </button>
           </ul> 
         </header>
     );

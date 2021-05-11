@@ -12,7 +12,7 @@
 
         .textContent {
             h1 {
-                color: #f33f3f;
+                color: var(--red);
                 font-size: 3rem;
                 text-transform: uppercase;
                 font-weight: 700;
@@ -36,7 +36,7 @@
                 margin-top: 0.6rem;
                 cursor: pointer;
                 color: #fff;
-                background-color: #f33f3f;
+                background-color: var(--red);
                 transition: background-color 0.2s;
                 padding:-4px;
             }

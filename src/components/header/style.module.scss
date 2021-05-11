@@ -46,6 +46,7 @@
         border-radius: 4rem;
         background-color: var(--white);
         color: var(--primary);
+        border: var(--primary) solid 1px;
         transition: background-color 0.3s;
         &:hover {
             background-color: var(--black);
@@ -60,13 +61,14 @@
         width: 10rem;
         padding: 0.9rem 0.7rem 0.9rem 0.7rem;
         border-radius: 4rem;
+        border: var(--primary) solid 1px;
         text-decoration: none;
-        background-color: var(--primary);
+        background-color: var(--primary-light);
         color: var(--white);
         transition: background-color 0.3s;
         &:hover {
             background-color: var(--black);
-        color: var(--white);
+            color: var(--white);
         }
     }
     

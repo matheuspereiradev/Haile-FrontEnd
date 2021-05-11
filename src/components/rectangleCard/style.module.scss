@@ -86,14 +86,19 @@
 			height: 40px;
             border: 0;
             cursor: pointer;
-            background: #25BA6B;
+            background: var(--green-500);
             color: #fff;
             position: relative;
 			display: flex;
 			align-items: center;
 			justify-content: center;
             transition: background-color 0.2s;
+
+			&:hover {
+				background-color: var(--green-600);
+			}
 	}
+
 }
 
 @media only screen and (max-width : 1224px) {
