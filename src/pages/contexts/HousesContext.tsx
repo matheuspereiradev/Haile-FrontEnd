@@ -19,8 +19,21 @@ interface House{
     idHouseType:number
 }
 
+interface ContractType{
+  id:number
+  name:string
+}
+
+interface HousesType{
+  id:number
+  name:string
+}
+
 interface HouseContextData{
-    listHouses:House[]
+    listHouses:Array<House>,
+    listContractTypes:Array<ContractType>,
+    listHousesTypes:Array<HousesType>,
+    setFilters:(housesTypes:Array<HousesType>, contractTypes:Array<ContractType>)=>void;
 }
 
 export const HouseContext = createContext({} as HouseContextData);
@@ -29,21 +42,22 @@ interface HomeChildrenProvider{
   children:ReactNode
 }
 
-export function PlayerContextProvider({children}:HomeChildrenProvider){
-  const [listPoadcast,setListPoadcast] = useState([])
-  const [currentEpisodeIndex,setCurrentEpisodeIndex] = useState(0);
-  const [isPlaying,setIsPlaying] = useState(false)
+export function HouseContextProvider({children}:HomeChildrenProvider){
+  const [listContractTypes,setListContractTypes] = useState([])
+  const [listHousesTypes,setListHousesTypes] = useState([])
+  const [listHouses,setListHouses] = useState([])
+
+  // const [currentEpisodeIndex,setCurrentEpisodeIndex] = useState(0);
+  // const [isPlaying,setIsPlaying] = useState(false)
 
  
-  function playPrevious(){
-    const index = currentEpisodeIndex-1;
-    if(index > -1){
-      setCurrentEpisodeIndex(index)
-    }
+  function setFilters(housesTypes:Array<HousesType>, contractTypes:Array<ContractType>){
+    setListContractTypes(contractTypes)
+    setListHousesTypes(housesTypes)
   }
 
     return(
-        <HouseContext.Provider value={null}>
+        <HouseContext.Provider value={{listHouses,listContractTypes,listHousesTypes,setFilters}}>
           {children}
         </HouseContext.Provider>
     )
