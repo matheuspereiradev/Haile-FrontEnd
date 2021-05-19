@@ -4,7 +4,7 @@ export function Header(){
 
     return (
         <header className={styles.headerContainer}>
-          <img src="/vercel.svg" alt="Haile logo"></img>  
+          <img src="/logo.svg" alt="Haile logo" className={styles.logo}></img>  
           <ul className={styles.navLinks}>
             <button className={styles.onlyText}>
               Entrar
