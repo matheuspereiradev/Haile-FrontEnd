@@ -1,23 +1,22 @@
 
 import {createContext, ReactNode, useState} from 'react';
 
-
-interface House{
-    id:string
-    state:string
-    city:string
-    amountValue:number
-    imageLink:string
-    street:string
-    houseNumber:number
-    district:string
-    details:string
-    adviser:string
-    slugAdviser:string
-    contractType:string
-    idContractType:number
-    idHouseType:number
-}
+// interface House{
+//     id:string
+//     state:string
+//     city:string
+//     amountValue:number
+//     imageLink:string
+//     street:string
+//     houseNumber:number
+//     district:string
+//     details:string
+//     adviser:string
+//     slugAdviser:string
+//     contractType:string
+//     idContractType:number
+//     idHouseType:number
+// }
 
 interface ContractType{
   id:number
@@ -29,23 +28,21 @@ interface HousesType{
   name:string
 }
 
-interface HouseContextData{
-    listHouses:Array<House>,
+interface FiltersContextData{
     listContractTypes:Array<ContractType>,
     listHousesTypes:Array<HousesType>,
     setFilters:(housesTypes:Array<HousesType>, contractTypes:Array<ContractType>)=>void;
 }
 
-export const HouseContext = createContext({} as HouseContextData);
+export const FiltersContext = createContext({} as FiltersContextData);
 
 interface HomeChildrenProvider{
   children:ReactNode
 }
 
-export function HouseContextProvider({children}:HomeChildrenProvider){
+export function FiltersContextProvider({children}:HomeChildrenProvider){
   const [listContractTypes,setListContractTypes] = useState([])
   const [listHousesTypes,setListHousesTypes] = useState([])
-  const [listHouses,setListHouses] = useState([])
 
   // const [currentEpisodeIndex,setCurrentEpisodeIndex] = useState(0);
   // const [isPlaying,setIsPlaying] = useState(false)
@@ -57,9 +54,9 @@ export function HouseContextProvider({children}:HomeChildrenProvider){
   }
 
     return(
-        <HouseContext.Provider value={{listHouses,listContractTypes,listHousesTypes,setFilters}}>
+        <FiltersContext.Provider value={{listContractTypes,listHousesTypes,setFilters}}>
           {children}
-        </HouseContext.Provider>
+        </FiltersContext.Provider>
     )
    
 }
